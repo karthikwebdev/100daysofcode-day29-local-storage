@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>savings app using local storage</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body onload="fetchCost()">
+    <div class="container">
+        <div class="box">
+        <div class="amount">
+            <form id="myform">
+                <label for="amount">Enter Income:</label>
+                <input type="number" name="amount" id="amount" required>
+                <input  class="button" type="submit" name="action" id="submit">
+            </form>
+        </div>
+        <div class="expenses-box">
+            <form id="expenses-form">
+                <label for="expenses">Enter Expenses:</label>
+                <input type="number" name="expenses" id="expenses" required>
+                <label for="describe">Describe Expenses:</label>
+                <input type="text" name="describe" id="describe" required>
+                <input class="button" type="submit" name="action">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col s3"></div>
+            <div class="col s6 card">
+             <h2 class="center-align">Total Savings</h2>
+             <h1 class="center-align" id="savingsAmount">0</h1>
+            </div>
+            <div class="col s3"></div>
+        </div>
+        <div class="card card-panel  blue lighten-4">
+            <table class="striped">
+                <thead>
+                  <tr>
+                      <th>expenses description</th>
+                      <th>cost</th>
+                  </tr>
+                </thead>
+        
+                <tbody id="tbody">
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
